@@ -1,0 +1,123 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,     
+pre, form, fieldset, input, textarea, p, blockquote, th, td {     
+ padding: 0;    
+ margin: 0;    
+}    
+fieldset, img {     
+ border: 0;    
+}    
+table {    
+ border-collapse: collapse;    
+ border-spacing: 0;    
+}    
+ol, ul {    
+ list-style: none;    
+}    
+address, caption, cite, code, dfn, em, strong, th, var {    
+ font-weight: normal;    
+ font-style: normal;    
+}    
+caption, th {    
+ text-align: left;    
+}    
+h1, h2, h3, h4, h5, h6 {    
+ font-weight: normal;    
+ font-size: 100%;    
+}    
+q:before, q:after {    
+ content: '';    
+}    
+abbr, acronym {     
+ border: 0;    
+}
+
+html{
+	background-color:#f9f6e1;
+	color:#544c4a;
+	text-shadow: 1px 1px 1px #ffffff;
+	font-family:'GentiumBasicRegular', Tahoma, Geneva, sans-serif;
+}
+
+a:link{
+	color:black;
+	text-decoration:none;
+}
+
+.right{
+	float:right;
+}
+
+.left{
+	float:left;
+}
+
+.clearfix{
+	clear:both;
+}
+
+.center{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.topbar{
+	width:100%;
+	height:20px;
+	background-color:#387575;
+}
+
+.header{
+	text-align:center;
+}
+.header h1{
+	font-size:5em;
+	margin:20px 0 10px 0;
+}
+
+.header span{
+}
+
+.wrap{
+	clear:both;
+	padding:20px 0;
+}
+
+.message{
+	position:relative;
+	width:415px;
+	float:left;
+	background-color:#ece5c7;
+	border-radius:10px;
+	padding:15px;
+	margin:15px;
+}
+
+.message p{
+	text-indent:2em;
+	margin:6px 12px;
+}
+
+.message .avatar{
+	border:1px grey solid;
+	border-radius:3px;
+	padding:1px;
+	width:42px;
+	height:42px;
+	position:absolute;
+	top:-20px;
+	right:20px;
+}
+.message .avatar img{
+	width:42px;
+	height:42px;
+}
+
+.small{
+	font-size:0.5em;
+}
+
+.footer{
+	text-align:center;
+	padding-top:20px;
+}

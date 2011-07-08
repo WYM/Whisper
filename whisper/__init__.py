@@ -12,6 +12,8 @@ db = connection.whisper
 
 from whisper.views.default import default
 from whisper.views.admin import admin
+from whisper.helper import helper
 
 app.register_module(default)
 app.register_module(admin, url_prefix='/admin')
+app.register_module(helper, url_prefix='/helper')
