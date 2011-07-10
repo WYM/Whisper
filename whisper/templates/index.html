@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="keywords" content="Microblog, blog, life. enjoy, love, peace, speak" /> 
+	<meta name="description" content="Making splendid shots of our life!" /> 
+	<title>Whisper</title>
+	<script type="text/javascript" src="{{ url_for('.static', filename='jquery.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.share-botton').click(function(){
+				$('.share').fadeIn(1000);
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" type="text/css" media="screen" /> 
+</head>
+
+<body>
+	<div class="topbar"></div></div>
+	<div class="header center">
+		<h1>Whisper</h1>
+		<span>{{ message }}</span>
+	</div>
+	
+	<div class="wrap center">
+		<div class="message addbox">
+			<form method="post" action="{{ url_for('post') }}">
+				<input name="name" placeholder="名字"/>
+				<input name="email" placeholder="E-Mail"/>
+				<textarea name="content" placeholder="你想说的..."></textarea>
+				<input type="submit" />
+			</form>
+		</div>
+		{% for post in data %}
+		<div class="message">
+			<a>{{ post.name }}</a>: 
+			<a class="avatar"><img src="{{ get_avatar(post.email) }}" /></a>
+			<p>{{ post.content }}</p>
+			<span class="small left time">{{ time_span(post.dateline) }}</span>
+			<span class="small right operate"><a class="share-botton" href="#">转发</a> | <a href="{{ url_for('star', pid = post.id.id) }}">{% if post.star %}★{% else %}☆{% endif %}</a></span>
+			<div class="share">
+				<!-- JiaThis Button BEGIN -->
+				<div id="ckepop">
+					<a class="jiathis_button_qzone">QQ空间</a>
+					<a class="jiathis_button_tsina">新浪微博</a>
+					<a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+					<a class="jiathis_counter_style"></a>
+				</div>
+				<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+				<!-- JiaThis Button END -->
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	
+	<div class="footer center">
+		<span class="small"><a>★</a> | <a href="http://ascdm.net/">提供建议</a> | <a href="http://ascdm.net/">报告错误</a> | <a>★</a></span>
+	</div>
+	
+</body>
+</html>

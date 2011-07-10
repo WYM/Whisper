@@ -1,0 +1,26 @@
+/usr/lib/mongodb/mongod --help for help and startup options
+Sat Jul  9 21:51:07 MongoDB starting : pid=7143 port=27017 dbpath=/data/db/ 32-bit 
+
+** NOTE: when using MongoDB 32 bit, you are limited to about 2 gigabytes of data
+**       see http://blog.mongodb.org/post/137788967/32-bit-limitations
+
+Sat Jul  9 21:51:07 db version v1.6.3, pdfile version 4.5
+Sat Jul  9 21:51:07 git version: nogitversion
+Sat Jul  9 21:51:07 sys info: Linux vernadsky 2.6.24-27-server #1 SMP Fri Mar 12 01:45:06 UTC 2010 i686 BOOST_LIB_VERSION=1_42
+Sat Jul  9 21:51:07 [initandlisten] *** warning: spider monkey build without utf8 support.  consider rebuilding with utf8 support
+Sat Jul  9 21:51:07 [initandlisten] waiting for connections on port 27017
+Sat Jul  9 21:51:07 [websvr] web admin interface listening on port 28017
+Sat Jul  9 21:51:10 [initandlisten] connection accepted from 127.0.0.1:37648 #1
+Sat Jul  9 21:51:12 [conn1] end connection 127.0.0.1:37648
+Sat Jul  9 21:51:16 [initandlisten] connection accepted from 127.0.0.1:37649 #2
+Sat Jul  9 21:51:17 [initandlisten] connection accepted from 127.0.0.1:37650 #3
+Sat Jul  9 21:56:14 [conn3] end connection 127.0.0.1:37650
+Sat Jul  9 21:56:15 [initandlisten] connection accepted from 127.0.0.1:34943 #4
+Sat Jul  9 21:57:20 [conn4] end connection 127.0.0.1:34943
+Sat Jul  9 21:57:22 [initandlisten] connection accepted from 127.0.0.1:34951 #5
+Sat Jul  9 21:57:36 [initandlisten] connection accepted from 127.0.0.1:34959 #6
+Sat Jul  9 21:58:37 [conn5] query whisper.ids ntoreturn:1 reslen:86 nscanned:1 { name: "posts" }  nreturned:1 111ms
+Sat Jul  9 21:58:37 [conn5] query whisper.$cmd ntoreturn:1 command: { findAndModify: "ids", query: { name: "posts" }, update: { $inc: { id: 1 } }, upsert: true } reslen:110 112ms
+Sat Jul  9 22:35:42 [conn5] end connection 127.0.0.1:34951
+Sat Jul  9 22:35:43 [initandlisten] connection accepted from 127.0.0.1:58572 #7
+Sat Jul  9 22:36:51 [conn6] end connection 127.0.0.1:34959

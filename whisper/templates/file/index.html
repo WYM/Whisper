@@ -14,9 +14,7 @@
 	<script type="text/javascript">
 		$(document).ready(function()  
 		{
-			$('h1').click(function(){
-				alert('hello');	
-			});
+			alert('hello');	
 		}
 	</script>
 	<link rel="stylesheet" href="./style.css" type="text/css" media="screen" /> 
@@ -30,6 +28,21 @@
 	</div>
 	
 	<div class="wrap center">
+		<div class="message addbox">
+			<form method="post" action="{{ url_for('add') }}">
+				<input name="name" placeholder="名字"/>
+				<input name="email" placeholder="E-Mail"/>
+				<textarea name="content" placeholder="你想说的..."></textarea>
+				<input type="submit" />
+			</form>
+		</div>
+		<div class="message">
+			<a>Mike</a>: 
+			<a class="avatar"><img src="" /></a>
+			<p>使用空标签清除浮动。我用了很久的一种方法，空标签可以是div标签，也可以是P标签。我习惯用P，够简短，只是需要另外为其清除边框，但理论上可以是任何标签。这种方式是在需要清浮动的父级元素内部的所有浮动元素后添加这样一个标签清楚浮动，并为其定义CSS代码：clear:both。此方法的弊端在于增加了无意义的结构元素。 </p>
+			<span class="small left time">1967-8-13 13:42:50</span>
+			<span class="small right operate"><a href="#">回复</a> | <a href="#">转发</a> | <a href="#">☆</a></span>
+		</div>
 		<div class="message">
 			<a>Mike</a>: 
 			<a class="avatar"><img src="" /></a>
@@ -46,12 +59,14 @@
 		</div>
 		<div class="message">
 			<a>Mike</a>: 
+			<a class="avatar"><img src="" /></a>
 			<p>使用空标签清除浮动。我用了很久的一种方法，空标签可以是div标签，也可以是P标签。我习惯用P，够简短，只是需要另外为其清除边框，但理论上可以是任何标签。这种方式是在需要清浮动的父级元素内部的所有浮动元素后添加这样一个标签清楚浮动，并为其定义CSS代码：clear:both。此方法的弊端在于增加了无意义的结构元素。 </p>
 			<span class="small left time">1967-8-13 13:42:50</span>
 			<span class="small right operate"><a href="#">回复</a> | <a href="#">转发</a> | <a href="#">☆</a></span>
 		</div>
 		<div class="message">
 			<a>Mike</a>: 
+			<a class="avatar"><img src="" /></a>
 			<p>使用空标签清除浮动。我用了很久的一种方法，空标签可以是div标签，也可以是P标签。我习惯用P，够简短，只是需要另外为其清除边框，但理论上可以是任何标签。这种方式是在需要清浮动的父级元素内部的所有浮动元素后添加这样一个标签清楚浮动，并为其定义CSS代码：clear:both。此方法的弊端在于增加了无意义的结构元素。 </p>
 			<span class="small left time">1967-8-13 13:42:50</span>
 			<span class="small right operate"><a href="#">回复</a> | <a href="#">转发</a> | <a href="#">☆</a></span>
