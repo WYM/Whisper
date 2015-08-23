@@ -9,7 +9,7 @@ db = connection.whisper
 @app.route('/')
 def install():
 	username = u'WYM'
-	password = 'z2028232'
+	password = 'pass'
 	title = u'Whisper of ' + username
 	introduce = u'Welcome to ' + username + '\'s Microblog. There are some interesting things should be share to you.'
 	
